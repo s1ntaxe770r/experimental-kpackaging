@@ -1,0 +1,15 @@
+apiVersion: kpack.io/v1alpha2
+kind: Image
+metadata:
+  name: tutorial-image
+  namespace: default
+spec:
+  tag: nullchannel/nc-test-random
+  serviceAccountName: tutorial-service-account
+  builder:
+    name: my-builder
+    kind: Builder
+  source:
+    git:
+      url: https://github.com/s1ntaxe770r/pong-server/
+      revision: 38cd8469e289a0f8b3d220b228b0f7365af9fcf0
